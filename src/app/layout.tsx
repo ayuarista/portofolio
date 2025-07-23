@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import { ScrollProgress } from "@/components/magicui/scroll-progress";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fontSerif = DM_Sans({
+  variable: "--font-primary",
   subsets: ["latin"],
+  // weight: "400",
 });
 
-const geistMono = Geist_Mono({
+const fontMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -27,8 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${fontSerif.className}`}
       >
+        <ScrollProgress />
         <SidebarProvider>
           <AppSidebar />
           <main>
