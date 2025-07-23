@@ -15,27 +15,27 @@ import {
 // Menu items.
 const items = [
   {
-    title: "Home",
+    id: 1,
     url: "/",
     icon: Home,
   },
   {
-    title: "About",
+    id: 2,
     url: "/about",
     icon: Inbox,
   },
   {
-    title: "Calendar",
+    id: 3,
     url: "#",
     icon: Calendar,
   },
   {
-    title: "Search",
+    id: 4,
     url: "#",
     icon: Search,
   },
   {
-    title: "Settings",
+    id: 5,
     url: "#",
     icon: Settings,
   },
@@ -46,15 +46,14 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.id}>
                   <SidebarMenuButton asChild>
                     <Link href={item.url}>
                       <item.icon />
-                      <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
