@@ -2,6 +2,7 @@ import HeroImage from "./section/hero/hero-image";
 import HeroHeading from "./section/hero/hero-heading";
 import AnimatedGrid from "./section/hero/animated-grid";
 import AboutMe from "./section/about/about-me";
+import Experience from "./section/experience/experience";
 export default function Home() {
   return (
     <section className="flex items-center min-h-screen">
@@ -12,6 +13,7 @@ export default function Home() {
         </div>
         <AnimatedGrid />
         <AboutMe />
+        <Experience/>
       </div>
     </section>
   );
