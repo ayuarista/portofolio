@@ -15,7 +15,7 @@ export default function HeroHeading() {
             </h1>
             <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-1">
-                Frontend{" "}
+                Junior{" "}
                 <span className="font-extralight">
                     Developer
                 </span>
