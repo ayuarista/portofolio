@@ -2,7 +2,6 @@ import HeroImage from "./section/hero/hero-image";
 import HeroHeading from "./section/hero/hero-heading";
 import AnimatedGrid from "./section/hero/animated-grid";
 import AboutMe from "./section/about/about-me";
-import { MarqueeDemo } from "@/components/marquee";
 export default function Home() {
   return (
     <section className="flex items-center min-h-screen">
@@ -12,8 +11,7 @@ export default function Home() {
           <HeroImage />
         </div>
         <AnimatedGrid />
-          <AboutMe />
-          <MarqueeDemo/>
+        <AboutMe />
       </div>
     </section>
   );

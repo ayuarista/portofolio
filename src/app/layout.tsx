@@ -4,6 +4,7 @@ import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 const fontSerif = DM_Sans({
   variable: "--font-primary",
@@ -28,9 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       <body
         className={`${fontSerif.className}`}
       >
+        <SmoothCursor/>
         <ScrollProgress />
         <SidebarProvider>
           <AppSidebar />
