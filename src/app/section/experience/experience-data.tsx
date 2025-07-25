@@ -1,4 +1,4 @@
-
+import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons"
 export const data = [
     {
         id: 1,
@@ -6,7 +6,20 @@ export const data = [
         description: "Worked as a software engineering intern, focusing on web development and backend services.",
         dates: "June 2023 - August 2023",
         image: "/timedoor.png",
-            
+        links: [
+            {
+                icon: <GitHubLogoIcon/>,
+                title: "Github",
+                href: "https://github.com/ayuarista/Herecycle",
+
+            },
+            {
+                icon: <InstagramLogoIcon/>,
+                title: "Instagram",
+                href: "https://www.instagram.com/p/DCrig48y00ifjLUzWnhTBFKB2sz4cSYy64gyck0/?img_index=1",
+
+            }
+        ]
     },
     {
         id: 2,
@@ -29,6 +42,13 @@ export const data = [
         description: "Worked as a software engineering intern, focusing on web development and backend services.",
         dates: "June 2023 - August 2023",
         image: "/indoapps.jpg",
+        links: [
+            {
+                icon: <GitHubLogoIcon/>,
+                title: "Github",
+                href: "https://github.com/ayuarista/indonesia-culture",
+            },
+        ]
     },
     {
         id: 5,
