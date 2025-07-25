@@ -97,7 +97,7 @@ const TechCard = ({
       )}
     >
       <i className={`${icon} text-4xl ${color}`}></i>
-      <p className="mt-2 text-xs font-medium dark:text-white">{name}</p>
+      <span className="mt-2 text-xs font-medium dark:text-white">{name}</span>
     </div>
   );
 };

@@ -1,5 +1,7 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+// import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { CodeIcon, RocketIcon, EnvelopeClosedIcon, HomeIcon, PersonIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { ModeToggle } from "./mode-toggle";
 
 import {
   Sidebar,
@@ -16,28 +18,33 @@ import {
 const items = [
   {
     id: 1,
+    title: "Home",
     url: "/",
-    icon: Home,
+    icon: HomeIcon,
   },
   {
     id: 2,
-    url: "/about",
-    icon: Inbox,
+    url: "#",
+    icon: PersonIcon,
+    title: "About"
   },
   {
     id: 3,
     url: "#",
-    icon: Calendar,
+    icon: RocketIcon,
+    title: "Experience"
   },
   {
     id: 4,
     url: "#",
-    icon: Search,
+    icon: CodeIcon,
+    title: "Projects"
   },
   {
     id: 5,
     url: "#",
-    icon: Settings,
+    icon: EnvelopeClosedIcon,
+    title: "Contact",
   },
 ]
 
@@ -49,8 +56,11 @@ export function AppSidebar() {
           {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
+              <SidebarMenuItem>
+                <ModeToggle />
+              </SidebarMenuItem>
               {items.map((item) => (
-                <SidebarMenuItem key={item.id}>
+                <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <Link href={item.url}>
                       <item.icon />

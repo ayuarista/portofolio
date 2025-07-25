@@ -18,7 +18,7 @@ export const data = [
     },
     {
         id: 3,
-        initial: "A",
+        initial: "AS",
         title: "Participated Internship at PT.ASANKA",
         description: "During my internship, I learned a lot.These experiences helped me grow both technically and creatively, and strengthened my interest in front-end development.",
         dates: "26 December 2024 - 13 Maret 2025"
