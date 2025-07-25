@@ -60,10 +60,11 @@ export function AppSidebar() {
                 <ModeToggle />
               </SidebarMenuItem>
               {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.id}>
                   <SidebarMenuButton asChild>
                     <Link href={item.url}>
                       <item.icon />
+                      <span className="block lg:hidden">{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
