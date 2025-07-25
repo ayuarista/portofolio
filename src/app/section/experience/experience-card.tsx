@@ -61,11 +61,11 @@ export default function ExperienceCard({
                 {dates && (
                     <time className="text-xs text-muted-foreground">{dates}</time>
                 )}
-                <h2 className="font-semibold leading-none">{title}</h2>
+                <h2 className="font-semibold text-lg leading-none">{title}</h2>
                 {description && (
-                    <span className="prose dark:prose-invert text-sm text-muted-foreground">
+                    <p className="prose dark:prose-invert text-[13px] text-muted-foreground">
                         {description}
-                    </span>
+                    </p>
                 )}
             </div>
             {links && links.length > 0 && (
