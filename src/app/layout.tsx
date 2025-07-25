@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { DM_Sans, Geist_Mono } from "next/font/google";
+import { DM_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
-const fontSerif = DM_Sans({
-  variable: "--font-primary",
+const fontSans = DM_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
   // weight: "400",
 });
 
-const fontMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fontMono = Poppins({
+  variable: "--font-mono",
   subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -28,12 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${fontSans.variable} ${fontMono.variable}`}>
     <head>
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     </head>
       <body
-        className={`${fontSerif.className}`}
       >
         <SmoothCursor/>
         <ScrollProgress />
