@@ -19,7 +19,7 @@ export default function AboutMe() {
             </div>
             <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-10 mt-16">
                 <div className="relative w-[330px] h-[350px]">
-                    <div className="absolute -top-6 -right-8 w-full h-full rotate-3 rounded-md bg-linear-to-r from-purple-500 via-indigo-500 to-blue-500 -z-10"></div>
+                    <div className="absolute -top-6 -right-8 w-full h-full rotate-3 rounded-md bg-linear-to-r from-purple-500 via-indigo-500 to-blue-500 dark:bg-linear-to-r daark:from-indigo-500 dark:via-blue-500 dark:to-cyan-500 -z-10"></div>
 
                     <Image
                         src="/profile.jpg"
@@ -39,7 +39,7 @@ export default function AboutMe() {
                         </h1>
                         <p className="border-t-4 border-indigo-500 w-12 mt-1"></p>
                     </div>
-                    <div className="text-gray-500 text-[16px] text-pretty text-justify mt-6">
+                    <div className="text-gray-500 dark:text-gray-400 text-[16px] text-pretty text-justify mt-6">
                         <p className="font-mono">
                             As a dedicated twelve grade student in Software Engineering at Vocational High School, I am passionate about web development and actively expanding my technical skills in front-end technologies. Currently building a strong foundation in web development, I have gained practical experience with core technologies including HTML, CSS, JS, React.js, and Tailwind CSS.
                         </p>

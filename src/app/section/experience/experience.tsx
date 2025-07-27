@@ -1,7 +1,6 @@
 import { GoGoal } from "react-icons/go";
 import ExperienceCard from "./experience-card";
 import { data } from "./experience-data";
-import { AuroraText } from "@/components/magicui/aurora-text";
 export default function Experience() {
     return (
         <section className="mx-8 lg:mx-36 mt-20">
@@ -13,16 +12,16 @@ export default function Experience() {
             </div>
 
             <div className="mt-10">
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {data.map((project, id) => (
+            <ul className="mb-4 ml-4 divide-y-2 divide-dashed border-l">
+              {data.map((experience, id) => (
                   <ExperienceCard
                     key={id}
-                    initial={project.initial}
-                    title={project.title}
-                    description={project.description}
-                    dates={project.dates}
-                    image={project.image}
-                    // links={project.links}
+                    initial={experience.initial}
+                    title={experience.title}
+                    description={experience.description}
+                    dates={experience.dates}
+                    image={experience.image}
+                    links={experience.links}
                   />
               ))}
             </ul>
