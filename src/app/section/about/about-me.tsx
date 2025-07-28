@@ -5,7 +5,7 @@ import { SpinningText } from "@/components/magicui/spinning-text";
 
 export default function AboutMe() {
     return (
-        <section className="mx-8 lg:mx-36 mt-10">
+        <section className="mx-8 lg:mx-36 mt-10" id="about-me">
             <div className="mt-7 flex flex-col gap-4">
                 <div className="text-3xl text-left flex items-center gap-2 ">
                     <span className="text-indigo-500 text-4xl">

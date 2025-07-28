@@ -19,12 +19,12 @@ const items = [
   {
     id: 1,
     title: "Home",
-    url: "/",
+    url: "#home",
     icon: HomeIcon,
   },
   {
     id: 2,
-    url: "#",
+    url: "#about-me",
     icon: PersonIcon,
     title: "About"
   },
