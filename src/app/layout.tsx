@@ -4,9 +4,7 @@ import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
-import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { ThemeProvider } from "@/components/theme-provider";
-
 const fontSans = DM_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -34,14 +32,9 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       </head>
-      <body
+      <body suppressHydrationWarning
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider>
           <ScrollProgress />
           <SidebarProvider>
             <AppSidebar />
