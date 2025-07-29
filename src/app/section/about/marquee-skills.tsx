@@ -1,9 +1,10 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
+import { SiAlpinedotjs } from "react-icons/si";
 
 const tech = [
   {
-    name: "React",
+    name: "React.js",
     icon: "devicon-react-original",
     color: "text-blue-500",
   },
@@ -18,11 +19,6 @@ const tech = [
     color: "text-cyan-500",
   },
   {
-    name: "TypeScript",
-    icon: "devicon-typescript-plain",
-    color: "text-blue-600",
-  },
-  {
     name: "MySQL",
     icon: "devicon-mysql-plain",
     color: "text-blue-400",
@@ -30,7 +26,7 @@ const tech = [
   {
     name: "JavaScript",
     icon: "devicon-javascript-plain",
-    color: "text-yellow-500",
+    color: "text-yellow-400",
   },
   {
     name: "Next.js",
@@ -40,7 +36,7 @@ const tech = [
   {
     name: "PHP",
     icon: "devicon-php-plain",
-    color: "text-blue-500",
+    color: "text-blue-700",
   },
   {
     name: "Github",
@@ -50,7 +46,7 @@ const tech = [
   {
     name: "Figma",
     icon: "devicon-figma-plain",
-    color: "text-blue-600",
+    color: "text-blue-500",
   },
   {
     name: "CSS",
