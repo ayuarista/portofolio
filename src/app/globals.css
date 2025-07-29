@@ -118,6 +118,7 @@
 *{
   font-family: var(--font-sans);
   scroll-behavior: smooth;
+  scroll-margin-top: 4rem;
 }
 p{
   font-family: var(--font-mono);
