@@ -19,30 +19,30 @@ const items = [
   {
     id: 1,
     title: "Home",
-    url: "#home",
+    url: "/",
     icon: HomeIcon,
   },
   {
     id: 2,
-    url: "#about-me",
+    url: "/#about-me",
     icon: PersonIcon,
     title: "About"
   },
   {
     id: 3,
-    url: "#",
+    url: "/#experience",
     icon: RocketIcon,
     title: "Experience"
   },
   {
     id: 4,
-    url: "#",
+    url: "/#projects",
     icon: CodeIcon,
     title: "Projects"
   },
   {
     id: 5,
-    url: "#",
+    url: "/#contact",
     icon: EnvelopeClosedIcon,
     title: "Contact",
   },
