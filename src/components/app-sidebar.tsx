@@ -1,74 +1,109 @@
-// import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
-import { CodeIcon, RocketIcon, EnvelopeClosedIcon, HomeIcon, PersonIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
-import { ModeToggle } from "./mode-toggle";
+'use client'
 
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import {
+  CodeIcon,
+  RocketIcon,
+  EnvelopeClosedIcon,
+  HomeIcon,
+  PersonIcon,
+} from '@radix-ui/react-icons'
+import { ModeToggle } from './mode-toggle'
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
+} from '@/components/ui/sidebar'
 
-// Menu items.
 const items = [
   {
-    id: 1,
-    title: "Home",
-    url: "/",
+    id: 'home',
+    title: 'Home',
+    url: '/#home',
     icon: HomeIcon,
   },
   {
-    id: 2,
-    url: "/#about-me",
+    id: 'about-me',
+    title: 'About',
+    url: '/#about-me',
     icon: PersonIcon,
-    title: "About"
   },
   {
-    id: 3,
-    url: "/#experience",
+    id: 'experience',
+    title: 'Experience',
+    url: '/#experience',
     icon: RocketIcon,
-    title: "Experience"
   },
   {
-    id: 4,
-    url: "/#projects",
+    id: 'projects',
+    title: 'Projects',
+    url: '/#projects',
     icon: CodeIcon,
-    title: "Projects"
   },
   {
-    id: 5,
-    url: "/#contact",
+    id: 'contact',
+    title: 'Contact',
+    url: '/#contact',
     icon: EnvelopeClosedIcon,
-    title: "Contact",
   },
 ]
 
 export function AppSidebar() {
+  const [activeId, setActiveId] = useState<string>('home')
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id')
+            if (id) setActiveId(id)
+          }
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    )
+
+    const sections = document.querySelectorAll('section[id]')
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
                 <ModeToggle />
               </SidebarMenuItem>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.id}>
-                  <SidebarMenuButton asChild>
-                    <Link href={item.url}>
-                      <item.icon />
-                      <span className="block lg:hidden">{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+
+              {items.map((item) => {
+                const isActive = item.id === activeId
+
+                return (
+                  <SidebarMenuItem key={item.id}>
+                    <SidebarMenuButton
+                      asChild
+                      className={isActive ? 'bg-primary text-white dark:bg-accent hover:bg-primary hover:text-white font-semibold' : ''}
+                    >
+                      <Link href={item.url}>
+                        <item.icon />
+                        <span className="block lg:hidden">{item.title}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                )
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
