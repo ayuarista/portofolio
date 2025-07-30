@@ -9,7 +9,7 @@ export default function AnimatedGrid(){
         repeatDelay={1}
         className={cn(
           "[mask-image:radial-gradient(650px_circle_at_center,white,transparent)]",
-          "h-[200%] w-full inset-x-0 inset-y-[-30%]",
+          "h-[240%] w-full inset-x-0 inset-y-[-30%]",
         )}
       />
     )
