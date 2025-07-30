@@ -63,7 +63,7 @@ export default function ExperienceCard({
                 )}
                 <h2 className="font-semibold text-lg leading-none">{title}</h2>
                 {description && (
-                    <p className="prose dark:prose-invert text-[13px] text-muted-foreground">
+                    <p className="prose dark:prose-invert text-sm/6 text-justify text-muted-foreground">
                         {description}
                     </p>
                 )}

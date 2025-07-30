@@ -3,8 +3,8 @@ export const data = [
     {
         id: 1,
         title: "Winning 2nd Website design at Timedoor",
-        description: "Worked as a software engineering intern, focusing on web development and backend services.",
-        dates: "June 2023 - August 2023",
+        description: "I participated in a national web design competition held by Timedoor Academy - PT Timedoor Indonesia. I got 2nd place from this Website Design competition.",
+        dates: "22 June - 23 June 2024",
         image: "/timedoor.png",
         links: [
             {
@@ -25,22 +25,22 @@ export const data = [
         id: 2,
         title: "Finalist UI Design at Primakara University",
         initial: "P",
-        description: "Worked as a software engineering intern, focusing on web development and backend services.",
-        dates: "June 2023 - August 2023",
+        description: "I participated in a UI Design competition held by Primakara University. I was selected as one of the finalists in this competition. This experience helped me improve my design skills and gain valuable insights into user interface design.",
+        dates: "April 2025 - June 2025",
         image: "/primakara.png",
     },
     {
         id: 3,
         initial: "AS",
         title: "Participated Internship at PT.ASANKA",
-        description: "During my internship, I learned a lot.These experiences helped me grow both technically and creatively, and strengthened my interest in front-end development.",
+        description: "During my 3 months internship at PT.ASANKA, I learned a lot. These experiences helped me grow both technically and creatively, and strengthened my interest in front-end development.",
         dates: "26 December 2024 - 13 Maret 2025"
     },
     {
         id: 4,
         title: "Winning Favorite Web Design at IndoApps",
-        description: "Worked as a software engineering intern, focusing on web development and backend services.",
-        dates: "June 2023 - August 2023",
+        description: "I participated in a national web design competition held by IndoApps. I got the Favorite Web Design award from this competition, with my project name 'Nusa Kita'",
+        dates: "Mei 2024",
         image: "/indoapps.jpg",
         links: [
             {
