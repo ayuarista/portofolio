@@ -54,6 +54,11 @@ const tech = [
     color: "text-blue-600",
   },
   {
+    name: "Wordpress",
+    icon: "devicon-wordpress-plain",
+    color: "text-blue-700",
+  },
+  {
     name: "HTML",
     icon: "devicon-html5-plain",
     color: "text-red-600",
