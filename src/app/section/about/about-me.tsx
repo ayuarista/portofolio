@@ -1,7 +1,6 @@
 import { MarqueeSkills } from "./marquee-skills"
 import { BsFire } from "react-icons/bs";
 import Image from "next/image";
-import { SpinningText } from "@/components/magicui/spinning-text";
 
 export default function AboutMe() {
     return (
@@ -12,58 +11,61 @@ export default function AboutMe() {
                         <BsFire />
                     </span>
                     <span className="">
-                        My <b className="font-bold">Skills</b>
+                        About <b className="font-bold">Me!</b>
                     </span>
                 </div>
                 <MarqueeSkills />
             </div>
 
 
-            <section className="mt-16">
-                <h1 className="text-3xl mb-6">
+            <section className="mt-5">
+                {/* <h1 className="text-4xl mb-5">
                     About <b className="font-bold text-indigo-500">Me!</b>
-                </h1>
+                </h1> */}
 
-                <div className="grid grid-cols-3 grid-rows-2 gap-3 auto-rows-fr">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                     <div className="row-span-2 col-start-3 row-start-1 relative">
-                        <div className="absolute -top-4 -right-4 w-full h-full rotate-2 rounded-xl bg-gradient-to-tr from-purple-500 via-indigo-500 to-blue-500 dark:from-indigo-600 dark:via-blue-600 dark:to-cyan-500 -z-10"></div>
+                        {/* <div className="absolute -top-4 -right-4 w-full h-full rotate-2 rounded-xl bg-gradient-to-tr from-purple-500 via-indigo-500 to-blue-500 dark:from-indigo-600 dark:via-blue-600 dark:to-cyan-500 -z-10"></div> */}
                         <Image
-                            src="/profile.jpg"
+                            src="/profile6.jpg"
                             width={330}
                             height={350}
                             alt="Profile picture"
-                            className="object-cover w-full h-full rounded-xl"
+                            className="object-cover aspect-square w-full h-full rounded-xl"
                             placeholder="blur"
                             blurDataURL="/profile-blur.jpg"
                         />
                     </div>
 
-                    <div className="col-span-2 col-start-1 row-start-2 bg-muted rounded-xl p-6 text-sm md:text-base text-gray-700 dark:text-gray-300">
+                    <div className="col-span-2 col-start-1 row-start-1
+                        rounded-xl p-5 text-justify text-sm/6 border-gray-950/[.3] bg-gray-950/[.03] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]">
                         <p>
-                            My journey in web development is fueled by a passion for technology and a desire to create intuitive digital experiences. As a junior developer, I am actively learning and exploring front-end technologies, with a strong motivation to transform creative ideas into functional, user-friendly web interfaces.
+                        As a dedicated twelve grade student in Software Engineering at Vocational High School, I am passionate about web development and actively expanding my technical skills in front-end technologies. Currently building a strong foundation in web development, I have gained practical experience with core technologies including HTML, CSS, JS, React.js, and Tailwind CSS.
                         </p>
                     </div>
 
-                    <div className="col-start-1 row-start-1 bg-muted rounded-xl p-6 text-sm md:text-base text-gray-700 dark:text-gray-300">
-                        <h2 className="text-xl font-bold text-indigo-500 mb-1">
-                            Student Developer
-                        </h2>
-                        <p className="text-pretty text-justify">
-                            Dedicated grade 12 Software Engineering student at Vocational High School. Focused on building solid fundamentals in web development.
-                        </p>
+                    <div className="col-start-1 row-start-2 rounded-xl ">
+                    <Image
+                            src="/profile2.jpg"
+                            width={330}
+                            height={350}
+                            alt="Profile picture"
+                            className="object-cover aspect-square w-full h-full rounded-xl"
+                            placeholder="blur"
+                            blurDataURL="/profile-blur.jpg"
+                        />
                     </div>
 
-                    {/* 7. Tech stack */}
-                    <div className="col-start-2 row-start-1 bg-muted rounded-xl p-6 text-sm md:text-base text-gray-700 dark:text-gray-300 flex flex-col justify-between">
-                        <h2 className="text-xl font-bold text-indigo-500 mb-2">
-                            Tech Stack
-                        </h2>
-                        <ul className="list-disc pl-5 space-y-1">
-                            <li>HTML, CSS, JavaScript</li>
-                            <li>React.js & Next.js</li>
-                            <li>Tailwind CSS</li>
-                            <li>Git & GitHub</li>
-                        </ul>
+                    <div className="col-start-2 row-start-2 rounded-xl">
+                         <Image
+                            src="/profile3.jpg"
+                            width={330}
+                            height={350}
+                            alt="Profile picture"
+                            className="object-cover object-bottom aspect-square w-full h-full rounded-xl"
+                            placeholder="blur"
+                            blurDataURL="/profile-blur.jpg"
+                        />
                     </div>
                 </div>
             </section>
