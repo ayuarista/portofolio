@@ -3,10 +3,10 @@ import { TbWorldShare } from "react-icons/tb";
 export const data = [
     {
         id: 1,
-        title: "Develop Freelancer Find Jobs Website",
+        title: "Finding Jobs Website",
         image: "/project/find-jobs.png",
-        dates: "January 2024 - March 2024",
-        description: "Created an AI agent to manage personal finances, including budgeting, expense tracking, and investment recommendations.",
+        dates: "October 2024 - December 2024",
+        description: "Finding Jobs is a website designed specifically, to help freelancers and users collaborate with each other.  Users can easily find top freelancers with the help of filters provided by the website.",
         tags: [
             "React JS",
             "Daisy UI",
@@ -16,7 +16,7 @@ export const data = [
             {
                 icon: <GitHubLogoIcon />,
                 type: "Source Code",
-                href: "hello"
+                href: "https://github.com/aryndraa/find-job-lite"
             },
             {
                 icon: <TbWorldShare />,
@@ -27,22 +27,20 @@ export const data = [
     },
     {
         id: 2,
-        title: "Develop AI Agent for personal Finance",
+        title: "Course Programmer Online",
         image: "/project/course-era.png",
-        dates: "January 2024 - March 2024",
-        description: "Created an AI agent to manage personal finances, including budgeting, expense tracking, and investment recommendations.",
+        dates: "March 2025",
+        description: "Course Era is a website that provides online courses for programmers. The website offers a variety of courses, including web development, data science, and machine learning.",
         tags: [
-            "Python",
-            "Langchain",
-            "OpenAI",
-            "Pandas",
-            "NumPy"
+            "HTML",
+            "Tailwind.css",
+            "Alpine.js",
         ],
         links: [
             {
                 icon: <GitHubLogoIcon />,
                 type: "Source Code",
-                href: "hello"
+                href: "https://github.com/ayuarista/CourseEra"
             },
             {
                 icon: <TbWorldShare />,
@@ -53,22 +51,20 @@ export const data = [
     },
     {
         id: 3,
-        title: "Develop AI Agent for personal Finance",
+        title: "Baliwoosh Tourism Website",
         image: "/project/baliwoosh.png",
-        dates: "January 2024 - March 2024",
-        description: "Created an AI agent to manage personal finances, including budgeting, expense tracking, and investment recommendations.",
+        dates: "August 2024 - October 2024",
+        description: "Baliwoosh is a guide website for tourists to find popular places in Bali. Baliwoosh website provides destinations, staycations, and famous restaurants in Bali.",
         tags: [
-            "Python",
-            "Langchain",
-            "OpenAI",
-            "Pandas",
-            "NumPy"
+            "React JS",
+            "Daisy UI",
+            "Tailwind.css",
         ],
         links: [
             {
                 icon: <GitHubLogoIcon />,
                 type: "Github",
-                href: "hello"
+                href: "https://github.com/ayuarista/baliwoosh"
             },
             {
                 icon: <TbWorldShare />,
@@ -79,23 +75,15 @@ export const data = [
     },
     {
         id: 4,
-        title: "Develop AI Agent for personal Finance",
+        title: "TKJ Website Profile",
         image: "/project/tkj.png",
-        dates: "January 2024 - March 2024",
-        description: "Created an AI agent to manage personal finances, including budgeting, expense tracking, and investment recommendations.",
+        dates: "November 2024",
+        description: "This website is a special profile website about the Computer and Network Engineering department at SMK Negeri 1 Denpasar. This website provides features for searching students and sorting students.",
         tags: [
-            "Python",
-            "Langchain",
-            "OpenAI",
-            "Pandas",
-            "NumPy"
+            "React JS",
+            "Tailwind.css",
         ],
         links: [
-            {
-                icon: <GitHubLogoIcon />,
-                type: "Github",
-                href: "hello"
-            },
             {
                 icon: <TbWorldShare />,
                 type: "Website",
@@ -105,22 +93,20 @@ export const data = [
     },
     {
         id: 5,
-        title: "Develop AI Agent for personal Finance",
+        title: "Echolife Website",
         image: "/project/echo-life.png",
-        dates: "January 2024 - March 2024",
-        description: "Created an AI agent to manage personal finances, including budgeting, expense tracking, and investment recommendations.",
+        dates: "August 2024 - October 2024",
+        description: "Echolife Website is a dedicated website to provide insight to people about the dangers of waste that is not recycled. This website provides information about the dangers of waste.",
         tags: [
-            "Python",
-            "Langchain",
-            "OpenAI",
-            "Pandas",
-            "NumPy"
+            "React JS",
+            "Daisy UI",
+            "Tailwind.css",
         ],
         links: [
             {
                 icon: <GitHubLogoIcon />,
                 type: "Source Code",
-                href: "hello"
+                href: "https://github.com/ayuarista/echolife"
             },
             {
                 icon: <TbWorldShare />,
@@ -131,16 +117,13 @@ export const data = [
     },
     {
         id: 6,
-        title: "Develop AI Agent for personal Finance",
+        title: "Nusa Kita Indonesia Culture",
         image: "/project/nusa-kita.png",
         dates: "January 2024 - March 2024",
-        description: "Created an AI agent to manage personal finances, including budgeting, expense tracking, and investment recommendations.",
+        description: "Nusa Kita is a website that showcases the rich culture of Indonesia. The website provides information about various cultural aspects, including traditional dances, music, and art from different regions of Indonesia.",
         tags: [
-            "Python",
-            "Langchain",
-            "OpenAI",
-            "Pandas",
-            "NumPy"
+            "React JS",
+            "Tailwind.css",
         ],
         links: [
             {

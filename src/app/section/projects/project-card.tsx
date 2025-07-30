@@ -71,14 +71,14 @@ export function ProjectCard({
       </Link>
       <CardHeader className="p-2">
         <div className="">
-          <CardTitle className="font-semibold text-base">{title}</CardTitle>
+          <CardTitle className="font-semibold text-lg">{title}</CardTitle>
           <time className="font-sans text-xs">{dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <h1 className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
+          <p className="prose max-w-full text-pretty font-sans text-justify text-[12.5px] mt-1 text-muted-foreground dark:prose-invert">
             {description}
-          </h1>
+          </p>
         </div>
       </CardHeader>
       <CardContent className="mt-auto flex flex-col px-2">
