@@ -61,9 +61,9 @@ export default function ExperienceCard({
                 {dates && (
                     <time className="text-xs text-muted-foreground">{dates}</time>
                 )}
-                <h2 className="font-semibold text-lg leading-none">{title}</h2>
+                <h2 className="font-bold text-base/7 md:text-lg leading-none">{title}</h2>
                 {description && (
-                    <p className="prose dark:prose-invert text-sm/6 text-justify text-muted-foreground">
+                    <p className="prose dark:prose-invert text-xs/5 md:text-sm/6 text-justify text-muted-foreground">
                         {description}
                     </p>
                 )}

@@ -5,9 +5,9 @@ export default function Project() {
   return (
     <section className="mx-8 lg:mx-36 mt-10" id="projects">
 
-      <div className="text-4xl text-center">
+      <div className="text-3xl md:text-4xl text-center">
         <h1 className="font-bold">Check out my latest project! </h1>
-        <p className="text-gray-500 text-sm w-1/2 mt-2 mx-auto text-center">
+        <p className="text-gray-500 text-[13px]/5 md:text-sm md:w-1/2 mt-3 mx-auto text-center">
           Here are some of the projects I have worked on recently. Each project showcases my skills and creativity in web development and design.
         </p>
       </div>
