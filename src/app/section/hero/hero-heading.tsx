@@ -29,13 +29,13 @@ export default function HeroHeading() {
                 Based In <span className="font-bold">Indonesia.</span>
             </h1>
             <p
-                className="text-gray-500 text-[14px] md:text-sm/6 max-w-xl mt-4 text-center lg:text-justify mb-4"
+                className="text-gray-500 text-[13px]/6 md:text-sm/6 max-w-xl mt-4 text-center lg:text-justify mb-4"
             >
                 Hi! as a dedicated twelve-grade student in Software Engineering at
                 Vocational High School, I am passionate about web development and
                 actively expanding my technical skills in front-end technologies.
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center md:justify-start gap-3">
                 <ShimmerButton className="shadow-2xl">
                     <div className="flex items-center gap-2">
                         <p className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-base">
