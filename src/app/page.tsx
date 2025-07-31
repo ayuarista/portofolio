@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <section className="flex items-center min-h-screen">
       <div className="w-full">
-        <section id="home" className="flex flex-col-reverse min-h-0 lg:min-h-[90vh] lg:flex-row justify-center items-center mx-4 gap-12">
+        <section id="home" className="flex flex-col-reverse min-h-[80vh] lg:min-h-[90vh] lg:flex-row justify-center items-center mx-4 gap-12">
           <HeroHeading />
           <HeroImage />
         </section>
