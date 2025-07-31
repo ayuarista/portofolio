@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function AboutMe() {
     return (
-        <section id="about-me" className="mx-8 lg:mx-36 mt-10">
+        <section id="about-me" className="mx-8 lg:mx-36 mt-12">
             <div className="mt-7 flex flex-col gap-4">
-                <div className="text-3xl text-left flex items-center gap-2 ">
+                <div className="text-2xl md:text-3xl text-left flex items-center gap-2 ">
                     <span className="text-indigo-500 text-4xl">
                         <BsFire />
                     </span>
@@ -24,7 +24,7 @@ export default function AboutMe() {
                 </h1> */}
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                    <div className="row-span-2 col-start-3 row-start-1 relative">
+                    <div className="hidden md:block row-span-2 col-start-3 row-start-1 relative">
                         {/* <div className="absolute -top-4 -right-4 w-full h-full rotate-2 rounded-xl bg-gradient-to-tr from-purple-500 via-indigo-500 to-blue-500 dark:from-indigo-600 dark:via-blue-600 dark:to-cyan-500 -z-10"></div> */}
                         <Image
                             src="/profile6.jpg"
