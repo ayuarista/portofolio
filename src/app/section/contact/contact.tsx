@@ -6,9 +6,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import { AuroraText } from "@/components/magicui/aurora-text";
 
 interface Props {
-  e: string; // WhatsApp number like 6281234567890
+  e: string;
 }
 
 export default function Contact({ e }: Props) {
@@ -32,8 +33,7 @@ export default function Contact({ e }: Props) {
   };
 
   return (
-    <section id="contact" className="max-w-5xl h-screen flex flex-col-reverse justify-center items-center mx-auto gap-10 px-6 py-10 bg-background text-foreground">
-      {/* Left (Form) */}
+    <section id="contact" className="max-w-5xl h-screen flex flex-col-reverse justify-center items-center mx-auto gap-10 px-6 bg-background text-foreground">
       <form
         action="https://formspree.io/f/xwpqqerz"
         method="POST"
@@ -93,13 +93,12 @@ export default function Contact({ e }: Props) {
         </div>
       </form>
 
-      {/* Right (Text) */}
       <div className=" space-y-4">
         <h1 className="text-3xl md:text-4xl font-bold leading-snug">
           Let&apos;s Start{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+          <AuroraText className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
             Conversation
-          </span>{" "}
+          </AuroraText>{" "}
           With Me!
         </h1>
         <p className="text-muted-foreground text-sm/6">
