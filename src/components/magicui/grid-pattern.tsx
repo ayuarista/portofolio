@@ -39,7 +39,7 @@ export function GridPattern({
   ...props
 }: AnimatedGridPatternProps) {
   const id = useId();
-  const containerRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<SVGSVGElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [squares, setSquares] = useState<Array<{ id: number; pos: number[] }>>([]);
 
