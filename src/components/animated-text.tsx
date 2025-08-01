@@ -1,4 +1,3 @@
-import { ArrowRightIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import { ChevronRight } from "lucide-react";
