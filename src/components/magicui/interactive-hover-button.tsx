@@ -2,12 +2,10 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { cn } from "../../lib/utils";
 
-interface InteractiveHoverButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
-
+// Option 1: Remove interface entirely, use the base type directly
 export const InteractiveHoverButton = React.forwardRef<
   HTMLButtonElement,
-  InteractiveHoverButtonProps
+  React.ButtonHTMLAttributes<HTMLButtonElement>
 >(({ children, className, ...props }, ref) => {
   return (
     <button
