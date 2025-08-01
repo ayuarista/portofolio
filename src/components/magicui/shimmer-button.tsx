@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 
-export interface ShimmerButtonProps extends ComponentPropsWithoutRef<"button"> {
+export interface ShimmerButtonProps extends ComponentPropsWithoutRef<"a"> {
   shimmerColor?: string;
   shimmerSize?: string;
   borderRadius?: string;
@@ -11,10 +11,12 @@ export interface ShimmerButtonProps extends ComponentPropsWithoutRef<"button"> {
   background?: string;
   className?: string;
   children?: React.ReactNode;
+  href?: string;
+  download?: string;
 }
 
 export const ShimmerButton = React.forwardRef<
-  HTMLButtonElement,
+  HTMLAnchorElement, // Changed from HTMLButtonElement to HTMLAnchorElement
   ShimmerButtonProps
 >(
   (
@@ -26,14 +28,15 @@ export const ShimmerButton = React.forwardRef<
       background = "rgba(0, 0, 0, 1)",
       className,
       children,
-      ...props
+      href = "/cv.pdf",
+      download = "CV Ayu Arista.pdf",
+      // ...props
     },
     ref,
   ) => {
     return (
       <Link
-        href="/cv.pdf"
-        download="CV Ayu Arista.pdf"
+        href={href}
         style={
           {
             "--spread": "90deg",
@@ -50,7 +53,7 @@ export const ShimmerButton = React.forwardRef<
           className,
         )}
         ref={ref}
-        {...props}
+        download={download}
       >
         {/* spark container */}
         <div
