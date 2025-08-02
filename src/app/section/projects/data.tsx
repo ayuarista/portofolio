@@ -4,6 +4,7 @@ export const data = [
     {
         id: 1,
         title: "Finding Jobs Website",
+        href: "https://find-job-lite.vercel.app/",
         image: "/project/find-jobs.png",
         dates: "October 2024 - December 2024",
         description: "Finding Jobs is a website designed specifically, to help freelancers and users collaborate with each other.  Users can easily find top freelancers with the help of filters provided by the website.",
@@ -28,6 +29,7 @@ export const data = [
     {
         id: 2,
         title: "Course Programmer Online",
+        href: "https://course-era.netlify.app/",
         image: "/project/course-era.png",
         dates: "March 2025",
         description: "Course Era is a website that provides online courses for programmers. The website offers a variety of courses, including web development, data science, and machine learning.",
@@ -52,6 +54,7 @@ export const data = [
     {
         id: 3,
         title: "Baliwoosh Tourism Website",
+        href: "https://baliwoosh.netlify.app/",
         image: "/project/baliwoosh.png",
         dates: "August 2024 - October 2024",
         description: "Baliwoosh is a guide website for tourists to find popular places in Bali. Baliwoosh website provides destinations, staycations, and famous restaurants in Bali.",
@@ -76,6 +79,7 @@ export const data = [
     {
         id: 4,
         title: "TKJ Website Profile",
+        href: "https://web-profile-tkj.netlify.app/",
         image: "/project/tkj.png",
         dates: "November 2024",
         description: "This website is a special profile website about the Computer and Network Engineering department at SMK Negeri 1 Denpasar. This website provides features for searching students and sorting students.",
