@@ -99,6 +99,7 @@ export const data = [
         id: 5,
         title: "Echolife Website",
         image: "/project/echo-life.png",
+        href: "https://echolife.netlify.app/",
         dates: "August 2024 - October 2024",
         description: "Echolife Website is a dedicated website to provide insight to people about the dangers of waste that is not recycled. This website provides information about the dangers of waste.",
         tags: [
@@ -122,6 +123,7 @@ export const data = [
     {
         id: 6,
         title: "Nusa Kita Indonesia Culture",
+        href: "https://nusa-kita.netlify.app/",
         image: "/project/nusa-kita.png",
         dates: "January 2024 - March 2024",
         description: "Nusa Kita is a website that showcases the rich culture of Indonesia. The website provides information about various cultural aspects, including traditional dances, music, and art from different regions of Indonesia.",
