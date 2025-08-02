@@ -19,10 +19,6 @@ export default function AboutMe() {
 
 
             <section className="mt-5">
-                {/* <h1 className="text-4xl mb-5">
-                    About <b className="font-bold text-indigo-500">Me!</b>
-                </h1> */}
-
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                     <div className="hidden md:block row-span-2 col-start-3 row-start-1 relative">
                         {/* <div className="absolute -top-4 -right-4 w-full h-full rotate-2 rounded-xl bg-gradient-to-tr from-purple-500 via-indigo-500 to-blue-500 dark:from-indigo-600 dark:via-blue-600 dark:to-cyan-500 -z-10"></div> */}
