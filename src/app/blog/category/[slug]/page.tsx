@@ -1,4 +1,3 @@
-// app/blog/category/[slug]/page.tsx
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -14,7 +13,6 @@ interface CategoryPageProps {
   };
 }
 
-// Generate metadata for SEO
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const [posts, categories] = await Promise.all([
     getPostsByCategory(params.slug),
@@ -37,7 +35,6 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   };
 }
 
-// Generate static paths
 export async function generateStaticParams() {
   const categories = await getCategories();
   
@@ -60,7 +57,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <div className="container mx-auto px-36 py-8">
-      {/* Back Button */}
       <Button variant="ghost" asChild className="mb-8">
         <Link href="/blog" className="flex items-center gap-2">
           <ArrowLeft className="w-4 h-4" />
@@ -68,7 +64,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </Link>
       </Button>
 
-      {/* Category Header */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full mb-4">
           <Folder className="w-8 h-8 text-blue-600 dark:text-blue-400" />
@@ -89,10 +84,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </div>
       </div>
 
-      {/* Category Filter */}
       <CategoryFilter categories={categories} currentCategory={params.slug} />
       
-      {/* Posts Grid */}
       {posts.length > 0 ? (
         <BlogGrid posts={posts} />
       ) : (

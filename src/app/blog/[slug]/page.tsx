@@ -1,4 +1,3 @@
-// app/blog/[slug]/page.tsx
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -15,7 +14,6 @@ interface PostPageProps {
   };
 }
 
-// Generate metadata for SEO
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
   const post = await getPost(params.slug);
   
@@ -36,7 +34,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
       images: post.image ? [post.image] : [],
       type: 'article',
       publishedTime: post.published_at,
-      authors: ['Your Name'], // Replace with actual author
+      authors: ['Ayu Arista'],
     },
     twitter: {
       card: 'summary_large_image',
@@ -47,7 +45,6 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
   };
 }
 
-// Generate static paths for better performance
 export async function generateStaticParams() {
   const posts = await getPosts();
   
@@ -73,7 +70,6 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <article className="container mx-auto px-4 py-8 max-w-4xl">
-      {/* Back Button */}
       <Button variant="ghost" asChild className="mb-8">
         <Link href="/blog" className="flex items-center gap-2">
           <ArrowLeft className="w-4 h-4" />
@@ -81,9 +77,7 @@ export default async function PostPage({ params }: PostPageProps) {
         </Link>
       </Button>
 
-      {/* Header */}
       <header className="mb-8">
-        {/* Category */}
         {post.category && (
           <div className="mb-4">
             <Badge 
@@ -97,7 +91,6 @@ export default async function PostPage({ params }: PostPageProps) {
           </div>
         )}
 
-        {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
           {post.title}
         </h1>
@@ -120,7 +113,6 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
       </header>
 
-      {/* Featured Image */}
       {post.image && (
         <div className="relative w-full h-64 md:h-96 mb-8 overflow-hidden rounded-lg">
           <Image
@@ -134,7 +126,6 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
       )}
 
-      {/* Content */}
       <div 
         className="prose prose-lg dark:prose-invert max-w-none mb-8"
         dangerouslySetInnerHTML={{ __html: post.content }}
@@ -142,7 +133,6 @@ export default async function PostPage({ params }: PostPageProps) {
 
       <Separator className="my-8" />
 
-      {/* Tags */}
       {Array.isArray(post.tags) && post.tags.length > 0 && (
         <div className="mb-8">
           <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -159,7 +149,6 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
       )}
 
-      {/* Navigation */}
       <div className="flex justify-between items-center pt-8 border-t">
         <Button variant="outline" asChild>
           <Link href="/blog">

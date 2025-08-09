@@ -1,4 +1,3 @@
-// app/blog/page.tsx
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 import { BlogGrid } from '@/components/blog/BlogGrid';
@@ -15,7 +14,6 @@ export const metadata: Metadata = {
 function BlogLoadingSkeleton() {
     return (
         <div className="space-y-8 px-32">
-            {/* Featured post skeleton */}
             <div className="space-y-4">
                 <div className="flex items-center gap-2">
                     <Skeleton className="h-px flex-1" />
@@ -41,7 +39,6 @@ function BlogLoadingSkeleton() {
                 </div>
             </div>
 
-            {/* Grid skeleton */}
             <div className="space-y-4">
                 <div className="flex items-center gap-2">
                     <Skeleton className="h-px flex-1" />
@@ -81,10 +78,8 @@ async function BlogContent() {
 
     return (
         <>
-            {/* Category Filter */}
             <CategoryFilter categories={categories} />
 
-            {/* Blog Grid */}
             <BlogGrid posts={posts} />
         </>
     );
@@ -93,7 +88,6 @@ async function BlogContent() {
 export default function BlogPage() {
     return (
         <div className="container mx-auto px-36 py-8">
-            {/* Header */}
             <div className="text-center mb-12">
                 <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                     My Blog
@@ -103,7 +97,6 @@ export default function BlogPage() {
                 </p>
             </div>
 
-            {/* Content */}
             <Suspense fallback={<BlogLoadingSkeleton />}>
                 <BlogContent />
             </Suspense>
