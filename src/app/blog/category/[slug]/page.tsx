@@ -14,11 +14,7 @@ interface CategoryPageProps {
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const [posts, categories] = await Promise.all([
-    getPostsByCategory(params.slug),
-    getCategories()
-  ]);
-  
+  const categories = await getCategories();  
   const category = categories.find(cat => cat.slug === params.slug);
   
   if (!category) {
