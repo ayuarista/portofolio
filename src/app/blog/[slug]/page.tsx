@@ -26,11 +26,11 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
 
   return {
     title: `${post.title} - Blog`,
-    description: post.excerpt,
+    description: post.description,
     keywords: post.tags,
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description: post.description,
       images: post.image ? [post.image] : [],
       type: 'article',
       publishedTime: post.published_at,
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
     twitter: {
       card: 'summary_large_image',
       title: post.title,
-      description: post.excerpt,
+      description: post.description,
       images: post.image ? [post.image] : [],
     },
   };
@@ -149,7 +149,7 @@ export default async function PostPage({ params }: PostPageProps) {
         </div>
       )}
 
-      <div className="flex justify-between items-center pt-8 border-t">
+      <div className="flex justify-between items-center pt-8">
         <Button variant="outline" asChild>
           <Link href="/blog">
             <ArrowLeft className="w-4 h-4 mr-2" />

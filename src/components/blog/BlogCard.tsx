@@ -1,4 +1,3 @@
-// components/blog/BlogCard.tsx
 import Image from 'next/image';
 import Link from 'next/link';
 import { CalendarDays, Clock, Tag } from 'lucide-react';
@@ -77,7 +76,7 @@ export function BlogCard({ post, variant = 'default' }: BlogCardProps) {
                     </Link>
 
                     <p className="text-muted-foreground leading-relaxed line-clamp-3 mb-6">
-                        {post.excerpt}
+                        {post.description}
                     </p>
 
                     {/* Tags */}
@@ -137,12 +136,12 @@ export function BlogCard({ post, variant = 'default' }: BlogCardProps) {
 
                         <Link href={`/blog/${post.slug}`}>
                             <h3 className="font-semibold text-sm line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
-                                {post.title}
+                                {post.description}
                             </h3>
                         </Link>
 
                         <p className="text-xs text-muted-foreground line-clamp-2">
-                            {post.excerpt}
+                            {post.description}
                         </p>
                     </CardContent>
                 </div>
@@ -200,7 +199,7 @@ export function BlogCard({ post, variant = 'default' }: BlogCardProps) {
                     </h3>
                 </Link>
                 <p className="text-muted-foreground text-sm line-clamp-3 mb-4 flex-1">
-                    {post.excerpt}
+                    {post.description}
                 </p>
             </CardHeader>
 
