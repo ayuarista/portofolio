@@ -7,6 +7,7 @@ import {
   RocketIcon,
   EnvelopeClosedIcon,
   HomeIcon,
+  FileTextIcon,
   PersonIcon,
 } from '@radix-ui/react-icons'
 import { ModeToggle } from './mode-toggle'
@@ -50,6 +51,12 @@ const items = [
     title: 'Contact',
     url: '/#contact',
     icon: EnvelopeClosedIcon,
+  },
+  {
+    id: '',
+    title: 'Blog',
+    url: '/blog',
+    icon: FileTextIcon,
   },
 ]
 
