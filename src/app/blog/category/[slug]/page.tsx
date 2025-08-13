@@ -8,14 +8,15 @@ import { CategoryFilter } from '@/components/blog/CategoryFilter';
 import { getPostsByCategory, getCategories } from '@/lib/api';
 
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+  const { slug } = await params;
   const categories = await getCategories();  
-  const category = categories.find(cat => cat.slug === params.slug);
+  const category = categories.find(cat => cat.slug === slug);
   
   if (!category) {
     return {
@@ -40,12 +41,14 @@ export async function generateStaticParams() {
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { slug } = await params;
+  
   const [posts, categories] = await Promise.all([
-    getPostsByCategory(params.slug),
+    getPostsByCategory(slug),
     getCategories()
   ]);
   
-  const category = categories.find(cat => cat.slug === params.slug);
+  const category = categories.find(cat => cat.slug === slug);
   
   if (!category) {
     notFound();
@@ -80,7 +83,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </div>
       </div>
 
-      <CategoryFilter categories={categories} currentCategory={params.slug} />
+      <CategoryFilter categories={categories} currentCategory={slug} />
       
       {posts.length > 0 ? (
         <BlogGrid posts={posts} />
