@@ -11,9 +11,9 @@ export interface Category {
     id: number;
     title: string;
     slug: string;
-    excerpt: string;
     content: string;
-    image?: string;
+    description: string;
+    image: string;
     category?: {
       id: number;
       name: string;
