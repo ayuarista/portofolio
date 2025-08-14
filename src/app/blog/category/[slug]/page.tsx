@@ -73,12 +73,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </h1>
         
         {category.description && (
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-4">
+          <p className="text-sm lg:text-base text-muted-foreground max-w-2xl mx-auto mb-4">
             {category.description}
           </p>
         )}
         
-        <div className="text-sm text-muted-foreground">
+        <div className="text-sm lg:text-base text-muted-foreground">
           {posts.length} {posts.length === 1 ? 'post' : 'posts'} in this category
         </div>
       </div>
