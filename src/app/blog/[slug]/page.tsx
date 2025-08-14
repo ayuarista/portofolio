@@ -6,6 +6,7 @@ import { CalendarDays, Clock, ArrowLeft, Tag } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { FaHashtag } from "react-icons/fa";
 import { getPost, getPosts } from '@/lib/api';
 
 interface PostPageProps {
@@ -57,7 +58,7 @@ export async function generateStaticParams() {
 export default async function PostPage({ params }: PostPageProps) {
   const { slug } = await params;
   const post = await getPost(slug);
-
+  
   if (!post) {
     notFound();
   }
@@ -69,6 +70,11 @@ export default async function PostPage({ params }: PostPageProps) {
       day: 'numeric'
     });
   };
+  const tags = Array.isArray(post.tags)
+    ? post.tags
+    : post.tags
+    ? [post.tags]
+    : [];
 
   return (
     <article className="container mx-auto px-4 py-8 max-w-4xl">
@@ -124,27 +130,27 @@ export default async function PostPage({ params }: PostPageProps) {
             className="object-cover"
             priority
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
-          />
+            />
         </div>
       )}
 
       <div 
         className="prose prose-lg dark:prose-invert max-w-none mb-8"
         dangerouslySetInnerHTML={{ __html: post.content }}
-      />
-
+        />
+      
       <Separator className="my-8" />
 
-      {Array.isArray(post.tags) && post.tags.length > 0 && (
+      {tags && tags.length > 0 && (
         <div className="mb-8">
           <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-            <Tag className="w-5 h-5" />
+            <FaHashtag className="w-4 h-4" />
             Tags
           </h3>
           <div className="flex flex-wrap gap-2">
-            {post.tags.map((tag) => (
+            {tags.map((tag) => (
               <Badge key={tag} variant="outline" className="text-sm">
-                #{tag}
+                {tag}
               </Badge>
             ))}
           </div>
