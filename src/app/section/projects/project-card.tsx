@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { MdOutlineFileOpen } from "react-icons/md";
 import {
   Card,
   CardContent,
@@ -13,6 +14,7 @@ import Link from "next/link";
 interface Props {
   title: string;
   href?: string;
+  slug?: string;
   description: string;
   dates: string;
   tags: readonly string[];
@@ -29,7 +31,7 @@ interface Props {
 
 export function ProjectCard({
   title,
-  href,
+  slug,
   description,
   dates,
   tags,
@@ -40,13 +42,9 @@ export function ProjectCard({
   className,
 }: Props) {
   return (
-    <Card
-      className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-      }
-    >
+    <Card className="flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full">
       <Link
-        href={href || "#"}
+        href={`/project-detail/${slug}`}
         className={cn("block cursor-pointer", className)}
       >
         {video && (
@@ -56,7 +54,7 @@ export function ProjectCard({
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
           />
         )}
         {image && (
@@ -69,8 +67,9 @@ export function ProjectCard({
           />
         )}
       </Link>
+
       <CardHeader className="p-2">
-        <div className="">
+        <div>
           <CardTitle className="font-bold text-lg">{title}</CardTitle>
           <time className="font-sans text-xs">{dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
@@ -81,6 +80,7 @@ export function ProjectCard({
           </p>
         </div>
       </CardHeader>
+
       <CardContent className="mt-auto flex flex-col px-2">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
@@ -96,6 +96,7 @@ export function ProjectCard({
           </div>
         )}
       </CardContent>
+
       <CardFooter className="px-2 pb-3">
         {links && links.length > 0 && (
           <div className="flex flex-row flex-wrap items-start gap-1">
@@ -109,6 +110,12 @@ export function ProjectCard({
             ))}
           </div>
         )}
+        <Link href={`/project-detail/${slug}`}>
+          <Badge className="flex gap-1 text-[10px] px-2 py-1 mt-4 ml-1 mb-1">
+            <MdOutlineFileOpen />
+            Detail Project
+          </Badge>
+        </Link>
       </CardFooter>
     </Card>
   );
