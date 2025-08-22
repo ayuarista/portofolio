@@ -7,6 +7,7 @@ export const data = [
         href: "https://find-job-lite.vercel.app/",
         image: "/project/find-jobs.png",
         dates: "October 2024 - December 2024",
+        slug: "find-jobs",
         description: "Finding Jobs is a website designed specifically, to help freelancers and users collaborate with each other.  Users can easily find top freelancers with the help of filters provided by the website.",
         tags: [
             "React JS",
@@ -30,6 +31,7 @@ export const data = [
         id: 2,
         title: "Course Programmer Online",
         href: "https://course-era.netlify.app/",
+        slug: "course-era",
         image: "/project/course-era.png",
         dates: "March 2025",
         description: "Course Era is a website that provides online courses for programmers. The website offers a variety of courses, including web development, data science, and machine learning.",
@@ -54,6 +56,7 @@ export const data = [
     {
         id: 3,
         title: "Baliwoosh Tourism Website",
+        slug: "baliwoosh",
         href: "https://baliwoosh.netlify.app/",
         image: "/project/baliwoosh.png",
         dates: "August 2024 - October 2024",
@@ -79,6 +82,7 @@ export const data = [
     {
         id: 4,
         title: "TKJ Website Profile",
+        slug: "tkj-website-profile",
         href: "https://web-profile-tkj.netlify.app/",
         image: "/project/tkj.png",
         dates: "November 2024",
@@ -98,6 +102,7 @@ export const data = [
     {
         id: 5,
         title: "Echolife Website",
+        slug: "echolife",
         image: "/project/echo-life.png",
         href: "https://echolife.netlify.app/",
         dates: "August 2024 - October 2024",
@@ -123,9 +128,10 @@ export const data = [
     {
         id: 6,
         title: "Nusa Kita Indonesia Culture",
+        slug: "nusa-kita",
         href: "https://nusa-kita.netlify.app/",
         image: "/project/nusa-kita.png",
-        dates: "January 2024 - March 2024",
+        dates: "January 2025 - March 2025",
         description: "Nusa Kita is a website that showcases the rich culture of Indonesia. The website provides information about various cultural aspects, including traditional dances, music, and art from different regions of Indonesia.",
         tags: [
             "React JS",
@@ -135,7 +141,7 @@ export const data = [
             {
                 icon: <GitHubLogoIcon />,
                 type: "Source Code",
-                href: "hello"
+                href: "https://github.com/ayuarista/indonesia-culture"
             },
             {
                 icon: <TbWorldShare />,
