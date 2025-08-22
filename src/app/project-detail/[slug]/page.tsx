@@ -1,9 +1,8 @@
 import { notFound } from 'next/navigation';
 import { projectsData } from '@/app/project-detail/data';
+import { MdOutlineDateRange } from "react-icons/md";
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { BsCalendarDate } from "react-icons/bs";
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
@@ -23,7 +22,7 @@ export default function ProjectDetail({ params }: PageProps) {
     }
 
     return (
-        <div className="min-h-screen py-16">
+        <div className="min-h-screen py-8">
             <div className="container mx-auto px-4 max-w-4xl">
                 <Button variant="ghost" asChild className="mb-8">
                     <Link href="/" className="flex items-center gap-2">
@@ -33,22 +32,13 @@ export default function ProjectDetail({ params }: PageProps) {
                 </Button>
 
                 <div className="mb-8">
-                    <h1 className="text-2xl lg:text-3xl font-bold mb-4">{project.title}</h1>
-                    <div className="flex items-center">
-                    <BsCalendarDate className="w-4 h-4 text-muted-foreground mr-2" />
-                    <p className="text-sm text-muted-foreground mb-4">{project.dates}</p>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 mb-6">
-                        {project.tags.map((tag) => (
-                            <Badge key={tag} variant="secondary">
-                                {tag}
-                            </Badge>
-                        ))}
+                    <h1 className="text-2xl lg:text-3xl font-bold mb-2">{project.title}</h1>
+                    <div className="flex gap-2 items-center">
+                        <MdOutlineDateRange className="size-5 text-muted-foreground" />
+                        <p className="text-sm md:text-base text-muted-foreground">{project.dates}</p>
                     </div>
                 </div>
 
-                {/* Project Image */}
                 {project.image && (
                     <div className="mb-8">
                         <Image
@@ -56,68 +46,64 @@ export default function ProjectDetail({ params }: PageProps) {
                             alt={project.title}
                             width={800}
                             height={400}
-                            className="w-full h-64 md:h-72 object-cover rounded-lg"
+                            className="w-full h-64 md:h-80 object-cover rounded-lg"
                         />
                     </div>
                 )}
 
-                {/* Project Description */}
-                <Card className="mb-8">
-                    <CardHeader>
-                        <CardTitle>About This Project</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-lg leading-relaxed mb-4">
-                            {project.fullDescription}
-                        </p>
-                    </CardContent>
-                </Card>
+                <div>
+                    <h1 className='text-xl font-bold text-primary'>About this project</h1>
+                    <p className="text-[15px]/6 text-muted-foreground mt-2 text-justify">{project.description}</p>
+                </div>
 
-                {/* Technologies */}
-                {project.technologies && (
-                    <Card className="mb-8">
-                        <CardHeader>
-                            <CardTitle>Technologies Used</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="flex flex-wrap gap-2">
-                                {project.technologies.map((tech) => (
-                                    <Badge key={tech} variant="outline">
-                                        {tech}
-                                    </Badge>
+                <div className="flex items-start justify-between gap-5 mt-5">
+                    <div className='mt-2'>
+                        <div className="flex items-center gap-2">
+                            <h1 className='text-lg font-bold text-primary'>Role:</h1>
+                            <h1 className='text-primary font-bold'>{project.role}</h1>
+                        </div>
+                        {project.listrole && (
+                            <ul className="list-disc mt-1 text-muted-foreground pl-4 text-[16px]">
+                                {project.listrole.map((role) => (
+                                    <li key={role}>{role}</li>
                                 ))}
-                            </div>
-                        </CardContent>
-                    </Card>
-                )}
-
-                {/* Features */}
-                {project.features && (
-                    <Card className="mb-8">
-                        <CardHeader>
-                            <CardTitle>Key Features</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <ul className="space-y-2">
+                            </ul>
+                        )}
+                    </div>
+                    {project.features && (
+                        <div className="mt-3">
+                            <h1 className='font-bold text-primary text-xl'>Features: </h1>
+                            <ul className="list-disc mt-1 pl-4 text-base text-muted-foreground">
                                 {project.features.map((feature, index) => (
-                                    <li key={index} className="flex items-start gap-2">
-                                        <span className="text-primary">•</span>
-                                        <span>{feature}</span>
+                                    <li key={index}>
+                                        {feature}
                                     </li>
                                 ))}
                             </ul>
-                        </CardContent>
-                    </Card>
+                        </div>
+                    )}
+                </div>
+
+                {project.technologies && (
+                    <div className='mt-5 flex items-center gap-2'>
+                        <h1 className='font-bold text-primary'>Techologies:</h1>
+                        <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech) => (
+                                <Badge key={tech} variant="secondary">
+                                    {tech}
+                                </Badge>
+                            ))}
+                        </div>
+                    </div>
                 )}
 
-                {/* Project Links */}
                 {project.links && project.links.length > 0 && (
-                    <div className="flex flex-wrap gap-4">
+                    <div className="flex flex-wrap gap-4 mt-8">
                         {project.links.map((link, index) => (
                             <Button key={index} asChild variant="default">
                                 <Link href={link.href} target="_blank" className="gap-2">
                                     {link.type === "Website" && <ExternalLink className="w-4 h-4" />}
-                                    {link.type === "GitHub" && <Github className="w-4 h-4" />}
+                                    {link.type === "Source Code" && <Github className="w-4 h-4" />}
                                     {link.type}
                                 </Link>
                             </Button>
@@ -129,7 +115,6 @@ export default function ProjectDetail({ params }: PageProps) {
     );
 }
 
-// Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps) {
     const project = projectsData.find(p => p.slug === params.slug);
 
@@ -140,12 +125,11 @@ export async function generateMetadata({ params }: PageProps) {
     }
 
     return {
-        title: `${project.title} | Your Portfolio`,
+        title: `${project.title}`,
         description: project.description,
     };
 }
 
-// Generate static paths for all projects
 export async function generateStaticParams() {
     return projectsData.map((project) => ({
         slug: project.slug,
