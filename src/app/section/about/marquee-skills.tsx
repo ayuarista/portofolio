@@ -104,7 +104,7 @@ const TechCard = ({
 
 export function MarqueeSkills() {
   return (
-    <div>
+    <div className="mt-7">
       <div className="w-full overflow-hidden">
         <div className="max-w-full overflow-hidden">
           <Marquee pauseOnHover className="[--duration:20s]">
