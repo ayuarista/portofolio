@@ -3,8 +3,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Folder } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { BlogGrid } from '@/components/blog/BlogGrid';
-import { CategoryFilter } from '@/components/blog/CategoryFilter';
+import { BlogGrid } from '@/components/blog/blog-grid';
+import { CategoryFilter } from '@/components/blog/category-filter';
 import { getPostsByCategory, getCategories } from '@/lib/api';
 
 interface CategoryPageProps {
@@ -15,9 +15,9 @@ interface CategoryPageProps {
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const categories = await getCategories();  
+  const categories = await getCategories();
   const category = categories.find(cat => cat.slug === slug);
-  
+
   if (!category) {
     return {
       title: 'Category Not Found',
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 
 export async function generateStaticParams() {
   const categories = await getCategories();
-  
+
   return categories.map((category) => ({
     slug: category.slug,
   }));
@@ -42,14 +42,14 @@ export async function generateStaticParams() {
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { slug } = await params;
-  
+
   const [posts, categories] = await Promise.all([
     getPostsByCategory(slug),
     getCategories()
   ]);
-  
+
   const category = categories.find(cat => cat.slug === slug);
-  
+
   if (!category) {
     notFound();
   }
@@ -67,24 +67,24 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full mb-4">
           <Folder className="w-8 h-8 text-blue-600 dark:text-blue-400" />
         </div>
-        
+
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           {category.name}
         </h1>
-        
+
         {category.description && (
           <p className="text-sm lg:text-base text-muted-foreground max-w-2xl mx-auto mb-4">
             {category.description}
           </p>
         )}
-        
+
         <div className="text-sm lg:text-base text-muted-foreground">
           {posts.length} {posts.length === 1 ? 'post' : 'posts'} in this category
         </div>
       </div>
 
       <CategoryFilter categories={categories} currentCategory={slug} />
-      
+
       {posts.length > 0 ? (
         <BlogGrid posts={posts} />
       ) : (

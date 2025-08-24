@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Metadata } from 'next';
-import { BlogGrid } from '@/components/blog/BlogGrid';
-import { CategoryFilter } from '@/components/blog/CategoryFilter';
+import { BlogGrid } from '@/components/blog/blog-grid';
+import { CategoryFilter } from '@/components/blog/category-filter';
 import { Skeleton } from '@/components/ui/skeleton';
 import { getPosts, getCategories } from '@/lib/api';
 
