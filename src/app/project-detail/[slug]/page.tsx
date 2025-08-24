@@ -8,14 +8,14 @@ import Link from 'next/link';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 
 interface PageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
-export default function ProjectDetail({ params }: PageProps) {
-
-    const project = projectsData.find(p => p.slug === params.slug);
+export default async function ProjectDetail({ params }: PageProps) {
+    const { slug } = await params;
+    const project = projectsData.find(p => p.slug === slug);
 
     if (!project) {
         notFound();
@@ -116,7 +116,8 @@ export default function ProjectDetail({ params }: PageProps) {
 }
 
 export async function generateMetadata({ params }: PageProps) {
-    const project = projectsData.find(p => p.slug === params.slug);
+    const { slug } = await params;
+    const project = projectsData.find(p => p.slug === slug);
 
     if (!project) {
         return {
