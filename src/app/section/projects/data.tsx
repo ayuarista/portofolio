@@ -69,7 +69,7 @@ export const data = [
         links: [
             {
                 icon: <GitHubLogoIcon />,
-                type: "Github",
+                type: "Source Code",
                 href: "https://github.com/ayuarista/baliwoosh"
             },
             {
@@ -96,6 +96,11 @@ export const data = [
                 icon: <TbWorldShare />,
                 type: "Website",
                 href: "https://web-profile-tkj.netlify.app/"
+            },
+            {
+                icon: <GitHubLogoIcon />,
+                type: "Source Code",
+                href: "https://github.com/ayuarista/web-profile-tkj"
             },
         ]
     },
