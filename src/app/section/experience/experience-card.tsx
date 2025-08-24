@@ -8,6 +8,8 @@ interface Props {
     initial?: string;
     dates: string;
     image?: string;
+    role?: string[];
+    tech?: string[];
     links?: readonly {
         icon: React.ReactNode;
         title: string;
@@ -42,7 +44,9 @@ export default function ExperienceCard({
     title,
     description,
     dates,
+    role,
     image,
+    tech,
     initial,
     links,
 }: Props) {
@@ -68,8 +72,29 @@ export default function ExperienceCard({
                     </p>
                 )}
             </div>
+            {role && role.length > 0 && (
+                <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
+                    Role:
+                    {role.map((role, idx) => (
+                        <Badge key={idx} className="text-xs">
+                            {role}
+                        </Badge>
+                    ))}
+                </div>
+            )}
+            {tech && tech.length > 0 && (
+                <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
+                    Technologies I used:
+                    {tech.map((tech, idx) => (
+                        <Badge key={idx} className="text-xs">
+                            {tech}
+                        </Badge>
+                    ))}
+                </div>
+            )}
             {links && links.length > 0 && (
                 <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
+                    Other links:
                     {links?.map((link, idx) => (
                         <Link href={link.href} key={idx}>
                             <Badge key={idx} title={link.title} className="flex gap-2">
