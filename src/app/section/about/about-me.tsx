@@ -42,7 +42,7 @@ export default function AboutMe() {
                     </div>
                     <div className="col-start-2 row-start-2 rounded-xl ">
                         <Image
-                            src="/profile2.jpg"
+                            src="/juara-itcc.jpg"
                             width={330}
                             height={350}
                             alt="Profile picture"
