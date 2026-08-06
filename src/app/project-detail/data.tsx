@@ -50,6 +50,36 @@ export const projectsData: Project[] = [
   },
   {
     id: 2,
+    slug: "Nutrinesia",
+    title: "Nutrinesia",
+    role: "Frontend Developer and UI/UX Designer",
+    listrole: [
+      'Create the frontend using HTML, Javascript and Tailwind CSS',
+      'Design the UI/UX using Figma',
+      'Create responsive design for mobile and desktop',
+    ],
+    description: "Nutrinesia is a website designed to provide users with information about nutritious foods and healthy eating habits. I created this website as a personal project to improve my frontend skills and learn more about UI/UX design. I designed the UI/UX using Figma and implemented the frontend using HTML, Javascript, and Tailwind CSS. The website is fully responsive and works well on both mobile and desktop devices.",
+    dates: "April 2026 - Mei 2026",
+    technologies: ["HTML", "Javascript", "Tailwind.css", "Figma"],
+    image: "/project/nutrinesia.png",
+    features: [
+      "User can find nutritious foods",
+      "User can view healthy eating tips",
+      "User can create a profile",
+    ],
+    links: [
+      {
+        type: "Source Code",
+        href: "https://github.com/ayuarista/004_Komang-Ayu-Arista-Dewi_NutriNesia"
+      },
+      {
+        type: "Website",
+        href: "https://ayuarista.github.io/004_Komang-Ayu-Arista-Dewi_NutriNesia/"
+      }
+    ],
+  },
+  {
+    id: 8,
     slug: "course-era",
     title: "Course Programmer Online",
     role: "Frontend Developer and UI/UX Designer",
@@ -74,7 +104,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     slug: "baliwoosh",
     title: "Baliwoosh Tourism Website",
     role: "Frontend Developer and UI/UX Designer",
@@ -105,7 +135,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "TKJ Website Profile",
     slug: "tkj-website-profile",
     role: "Frontend Developer and UI/UX Designer",
@@ -127,7 +157,7 @@ export const projectsData: Project[] = [
       {
         type: "Source Code",
         href: "https://github.com/ayuarista/web-profile-tkj"
-        
+
       },
       {
         type: "Website",
@@ -136,7 +166,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Echolife Website",
     slug: "echolife",
     role: "Frontend Developer",
@@ -161,7 +191,7 @@ export const projectsData: Project[] = [
         type: "Source Code",
         href: "https://github.com/ayuarista/echolife"
 
-        
+
       },
       {
         type: "Website",
@@ -170,7 +200,7 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Nusa Kita Indonesia Culture",
     slug: "nusa-kita",
     role: "Frontend Developer",
@@ -193,12 +223,42 @@ export const projectsData: Project[] = [
         type: "Source Code",
         href: "https://github.com/ayuarista/indonesia-culture"
 
-        
+
       },
       {
         type: "Website",
         href: "https://nusa-kita.netlify.app/"
 
+      }
+    ],
+  },
+  {
+    id: 3,
+    slug: "Wellora",
+    title: "Wellora",
+    role: "Frontend Developer and UI/UX Designer",
+    listrole: [
+      'Create the frontend using HTML, Javascript and Tailwind CSS',
+      'Design the UI/UX using Figma',
+      'Create responsive design for mobile and desktop',
+    ],
+    description: "Wellora is a website designed to provide users with information about healthy living and wellness. I created this website as a personal project to improve my frontend skills and learn more about UI/UX design. I designed the UI/UX using Figma and implemented the frontend using HTML, Javascript, and Tailwind CSS. The website is fully responsive and works well on both mobile and desktop devices.",
+    dates: "April 2026 - Juni 2026",
+    technologies: ["HTML", "Javascript", "Tailwind.css", "Figma"],
+    image: "/project/wellora.png",
+    features: [
+      "User can find nutritious foods",
+      "User can view healthy eating tips",
+      "User can create a profile",
+    ],
+    links: [
+      {
+        type: "Source Code",
+        href: "https://github.com/ayuarista"
+      },
+      {
+        type: "Website",
+        href: "https://web-wellora.netlify.app/"
       }
     ],
   },

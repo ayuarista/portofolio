@@ -29,6 +29,60 @@ export const data = [
     },
     {
         id: 2,
+        title: "Nutrinesia Website",
+        href: "https://nutrinesia.netlify.app/",
+        image: "/project/nutrinesia.png",
+        dates: "April 2026 - June 2026",
+        slug: "nutrinesia",
+        description: "Nutrinesia is a website that provides information about nutritious foods and healthy eating habits. The website offers recipes, nutritional information, and tips for maintaining a balanced diet.",
+        tags: [
+            "HTML",
+            "JavaScript",
+            "CSS",
+        ],
+        links: [
+            {
+                icon: <GitHubLogoIcon />,
+                type: "Source Code",
+                href: "https://github.com/ayuarista/004_Komang-Ayu-Arista-Dewi_NutriNesia"
+            },
+            {
+                icon: <TbWorldShare />,
+                type: "Website",
+                href: "https://ayuarista.github.io/004_Komang-Ayu-Arista-Dewi_NutriNesia/"
+
+            }
+        ],
+    },
+    {
+        id: 3,
+        title: "Wellora Website",
+        href: "https://web-wellora.netlify.app/",
+        image: "/project/wellora.png",
+        dates: "Mei 2026 - Juni 2026",
+        slug: "wellora",
+        description: "Wellora is a website that provides information about healthy living and wellness. The website offers tips, resources, and tools for maintaining a balanced lifestyle.",
+        tags: [
+            "HTML",
+            "JavaScript",
+            "Tailwind.css",
+        ],
+        links: [
+            {
+                icon: <GitHubLogoIcon />,
+                type: "Source Code",
+                href: "https://github.com/ayuarista"
+            },
+            {
+                icon: <TbWorldShare />,
+                type: "Website",
+                href: "https://web-wellora.netlify.app/"
+
+            }
+        ],
+    },
+    {
+        id: 8,
         title: "Course Programmer Online",
         href: "https://course-era.netlify.app/",
         slug: "course-era",
@@ -54,7 +108,7 @@ export const data = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         title: "Baliwoosh Tourism Website",
         slug: "baliwoosh",
         href: "https://baliwoosh.netlify.app/",
@@ -80,7 +134,7 @@ export const data = [
         ]
     },
     {
-        id: 4,
+        id: 5,
         title: "TKJ Website Profile",
         slug: "tkj-website-profile",
         href: "https://web-profile-tkj.netlify.app/",
@@ -105,7 +159,7 @@ export const data = [
         ]
     },
     {
-        id: 5,
+        id: 6,
         title: "Echolife Website",
         slug: "echolife",
         image: "/project/echo-life.png",
@@ -131,7 +185,7 @@ export const data = [
         ]
     },
     {
-        id: 6,
+        id: 7,
         title: "Nusa Kita Indonesia Culture",
         slug: "nusa-kita",
         href: "https://nusa-kita.netlify.app/",
@@ -152,6 +206,31 @@ export const data = [
                 icon: <TbWorldShare />,
                 type: "Website",
                 href: "https://nusa-kita.netlify.app/"
+            },
+        ]
+    },
+    {
+        id: 9,
+        title: "Edutech Website",
+        slug: "edutech",
+        href: "https://web-edutech.netlify.app/",
+        image: "/project/edutech.png",
+        dates: "February 2026 - March 2026",
+        description: "Edutech is a website that showcases the rich culture of Indonesia. The website provides information about various cultural aspects, including traditional dances, music, and art from different regions of Indonesia.",
+        tags: [
+            "React JS",
+            "Tailwind.css",
+        ],
+        links: [
+            {
+                icon: <GitHubLogoIcon />,
+                type: "Source Code",
+                href: "https://github.com/ayuarista/edutech"
+            },
+            {
+                icon: <TbWorldShare />,
+                type: "Website",
+                href: "https://web-edutech.netlify.app/"
             },
         ]
     },
